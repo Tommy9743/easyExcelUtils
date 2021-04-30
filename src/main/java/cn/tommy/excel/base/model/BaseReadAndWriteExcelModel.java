@@ -6,12 +6,14 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package cn.tommy.excel.read.base;
+package cn.tommy.excel.base.model;
 
 /**
- * 解析excel模型基类
+ * 同时支持读写的excel模型
  *
  * @author Tommy
  */
-public class BaseExcelReadModel {
+public abstract class BaseReadAndWriteExcelModel
+        extends BaseExcelReadModel {
+
 }

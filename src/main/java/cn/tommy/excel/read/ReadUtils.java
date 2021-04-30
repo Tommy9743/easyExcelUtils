@@ -9,8 +9,8 @@
 package cn.tommy.excel.read;
 
 import cn.hutool.core.io.FileUtil;
-import cn.tommy.excel.read.base.BaseExcelDataListener;
-import cn.tommy.excel.read.base.BaseExcelReadModel;
+import cn.tommy.excel.base.listener.BaseExcelDataListener;
+import cn.tommy.excel.base.model.BaseExcelReadModel;
 import cn.tommy.excel.read.config.ReadConfig;
 import com.alibaba.excel.EasyExcel;
 import com.google.common.collect.Lists;

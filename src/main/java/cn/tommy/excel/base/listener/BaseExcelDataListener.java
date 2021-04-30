@@ -6,8 +6,9 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package cn.tommy.excel.read.base;
+package cn.tommy.excel.base.listener;
 
+import cn.tommy.excel.base.model.BaseExcelReadModel;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.google.common.collect.Lists;
@@ -27,7 +28,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @Slf4j
-public class BaseExcelDataListener<T extends BaseExcelReadModel>
+public abstract class BaseExcelDataListener<T extends BaseExcelReadModel>
         extends AnalysisEventListener<T> {
 
     private List<T> result = Lists.newArrayList();
@@ -39,6 +40,6 @@ public class BaseExcelDataListener<T extends BaseExcelReadModel>
 
     @Override
     public void doAfterAllAnalysed (AnalysisContext context) {
-        log.info("解析完成！");
+        log.info("sheet:{},共计:{}行" + "解析完成！", + context.getCurrentSheet().getSheetNo(), + context.getCurrentRowNum());
     }
 }
